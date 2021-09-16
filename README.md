@@ -11,7 +11,7 @@ The purpose of this package is to provide easy way for interaction between MC Jo
 
 ##### Step 1. Install the package
 
-```
+```js
     npm i sfmc-jbca-react
 ```
 
