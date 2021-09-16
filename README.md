@@ -34,7 +34,7 @@ The purpose of this package is to provide easy way for interaction between MC Jo
     const {activity, interaction, getTokens, updateActivity, addEventListener} = useJourneyBuilder();
 ```
 
-## Avaialble objects and methods
+## Available objects and methods
 
 ```js
     activity
