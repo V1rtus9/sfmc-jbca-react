@@ -17,7 +17,7 @@ The purpose of this package is to provide easy way for interaction between MC Jo
 
 ##### Step 2. Wrap your app inside a `JourneyBuilderProvider` component
 
-```js
+```react
     ReactDOM.render(
         <React.StrictMode>
             <JourneyBuilderProvider>
