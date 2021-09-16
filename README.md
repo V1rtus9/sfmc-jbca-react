@@ -42,22 +42,21 @@ The purpose of this package is to provide easy way for interaction between MC Jo
 ```
 
 ```js
-        ready
-        destroy
-        nextStep
-        prevStep
-        getSchema
-        getTokens
-        getCulture
-        updateSteps
-        updateButton
-        getEndpoints
-        getDataSources
-        updateActivity
-        addEventListener
-        getInteractionDefaults
-        getInteractionTriggerEventDefinition    
-
+    ready
+    destroy
+    nextStep
+    prevStep
+    getSchema
+    getTokens
+    getCulture
+    updateSteps
+    updateButton
+    getEndpoints
+    getDataSources
+    updateActivity
+    addEventListener
+    getInteractionDefaults
+    getInteractionTriggerEventDefinition
 ```
 
 ## Links
