@@ -28,7 +28,7 @@ The purpose of this package is to provide easy way for interaction between MC Jo
     );
 ```
 
-##### Step 1. Use `useJourneyBuilder` hook in your functional components
+##### Step 3. Use `useJourneyBuilder` hook in your functional components
 
 ```js
     const {activity, interaction, getTokens, updateActivity, addEventListener} = useJourneyBuilder();
