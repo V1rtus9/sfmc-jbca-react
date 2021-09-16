@@ -11,13 +11,13 @@ The purpose of this package is to provide easy way for interaction between MC Jo
 
 ##### Step 1. Install the package
 
-```
+```js
     npm i sfmc-jbca-react
 ```
 
 ##### Step 2. Wrap your app inside a `JourneyBuilderProvider` component
 
-```
+```js
     ReactDOM.render(
         <React.StrictMode>
             <JourneyBuilderProvider>
@@ -30,7 +30,7 @@ The purpose of this package is to provide easy way for interaction between MC Jo
 
 ##### Step 1. Use `useJourneyBuilder` hook in your functional components
 
-```
+```js
     const {activity, interaction, getTokens, updateActivity, addEventListener} = useJourneyBuilder();
 ```
 
