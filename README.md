@@ -34,7 +34,33 @@ The purpose of this package is to provide easy way for interaction between MC Jo
     const {activity, interaction, getTokens, updateActivity, addEventListener} = useJourneyBuilder();
 ```
 
-## Links ##
+## Avaialble object and methods
+
+```js
+    activity
+    interaction
+```
+
+```js
+        ready
+        destroy
+        nextStep
+        prevStep
+        getSchema
+        getTokens
+        getCulture
+        updateSteps
+        updateButton
+        getEndpoints
+        getDataSources
+        updateActivity
+        addEventListener
+        getInteractionDefaults
+        getInteractionTriggerEventDefinition    
+
+```
+
+## Links
 
 [`Postmonger`](https://github.com/kevinparkerson/postmonger)
 [`Salesforce MC Postmonger Events Reference`](https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-app-development.meta/mc-app-development/using-postmonger.htm)
