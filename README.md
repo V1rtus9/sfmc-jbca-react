@@ -61,5 +61,6 @@ The purpose of this package is to provide easy way for interaction between MC Jo
 
 ## Links
 
+[`NPM`](https://www.npmjs.com/package/sfmc-jbca-react)
 [`Postmonger`](https://github.com/kevinparkerson/postmonger)
 [`Salesforce MC Postmonger Events Reference`](https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-app-development.meta/mc-app-development/using-postmonger.htm)
