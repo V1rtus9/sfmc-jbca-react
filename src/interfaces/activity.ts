@@ -8,6 +8,7 @@ export interface IArgument {
     timeout: number;
     retryCount: number;
     retryDelay: number;
+    inArguments: any[];
 }
 
 export interface IActivity {
