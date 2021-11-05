@@ -7,7 +7,7 @@ import React from 'react'
 import { IStep } from '../interfaces/step';
 import { ISchema } from '../interfaces/schema';
 import { ITokens } from '../interfaces/tokens';
-import { IButton } from '../interfaces/button';
+import { Button, IButton } from '../interfaces/button';
 import { __getTokens, __ready } from './utils/jba';
 import { postmongerPromise } from './utils/promise';
 import { IEndpoints } from '../interfaces/endpoints';
@@ -20,7 +20,7 @@ export const useJourneyBuilder = () => {
         React.useContext(JBCustomActivityAContext) as IContext;
 
     /**
-     * 
+     *
      * Called any time there is load time required between Journey Builder and the custom application (on iFrame load, and whenever a Next or Back button is clicked).
      */
     const ready = (): void => __ready(session);
@@ -37,8 +37,8 @@ export const useJourneyBuilder = () => {
 
     /**
      * Returns information about the JB Entry Source attributes
-     * 
-     * @unofficial 
+     *
+     * @unofficial
      */
     const getSchema = (): Promise<ISchema> => postmongerPromise(session, 'requestSchema', 'requestedSchema');
 
@@ -49,11 +49,11 @@ export const useJourneyBuilder = () => {
 
     /**
      * Returns information about the data sources used in the journey
-     * 
+     *
      * @unofficial
      */
     const getDataSources = (): Promise<IDataSource[]> => postmongerPromise(session, 'requestDataSources', 'requestedDataSources');
-       
+
     /**
      * Broadcast in response to a requestEndpoints event called by the custom application. Journey Builder passes back an object containing a REST host URL.
      */
@@ -74,7 +74,7 @@ export const useJourneyBuilder = () => {
      */
     const nextStep = (): void =>  session.trigger('nextStep');
 
-    /** 
+    /**
      * Called in response to clickedBack if there are no validation failures.
      */
     const prevStep = (): void => session.trigger('prevStep');
@@ -88,6 +88,18 @@ export const useJourneyBuilder = () => {
      * Called any time clickedNext or clickedBack is called by Journey Builder. May also be called programmatically, for instance, to disable the Next button if the user does not have a valid entry for a given field.
      */
     const updateButton = (button: IButton): void => session.trigger('updateButton', button);
+
+    /** */
+    const enableButton = (button: Button): void  => updateButton({
+        button,
+        enabled: true
+    });
+
+    /** */
+    const disableButton = (button: Button): void  => updateButton({
+        button,
+        enabled: false
+    });
 
     /**
      * Called when the activity modal should be closed, with the data saved to the activity on the canvas.
@@ -113,7 +125,7 @@ export const useJourneyBuilder = () => {
 
     /**
      * Subscribe to one of the events that is braadcasted by journey builder
-     * 
+     *
      * @clickedNext
      * Broadcast when the next button has been clicked on the configuration modal. The activity should respond by calling nextStep (or ready, if validation failed, and the custom activity wants to prevent navigation to the next step).
      * @clickedBack
@@ -135,7 +147,9 @@ export const useJourneyBuilder = () => {
         updateSteps,
         interaction,
         updateButton,
+        enableButton,
         getEndpoints,
+        disableButton,
         getDataSources,
         updateActivity,
         addEventListener,
